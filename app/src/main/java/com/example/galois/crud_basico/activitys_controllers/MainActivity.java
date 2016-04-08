@@ -44,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button botaoExemploScroll = (Button) findViewById(R.id.buttonExemploScroll);
+        botaoExemploScroll.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v2) {
+                Intent intent2 = new Intent(MainActivity.this, Exemplo_scroll.class);
+                startActivity(intent2);
+            }
+        });
+
 
     }//FIM DO ONCREATE
 
