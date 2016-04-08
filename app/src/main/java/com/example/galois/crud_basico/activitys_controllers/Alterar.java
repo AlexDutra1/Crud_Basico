@@ -25,6 +25,7 @@ public class Alterar extends Activity{
     Cursor cursor;
     BancoController crud;
     String codigo;
+    Button cancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +58,7 @@ public class Alterar extends Activity{
             }
         });
 
-        //testaoasasd
+
 
         deletar = (Button)findViewById(R.id.button3);
         deletar.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +71,21 @@ public class Alterar extends Activity{
             }
         });
 
-        //teste23
+
+        cancelar = (Button)findViewById(R.id.buttonCancelar);
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Alterar.this, Consulta.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
+
 
     }
 }

@@ -16,6 +16,7 @@ import com.example.galois.crud_basico.persistencia.BancoController;
  */
 public class Inserir extends Activity {
 
+    Button voltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,17 @@ public class Inserir extends Activity {
                 resultado = crud.insereDado(tituloString, autorString, editoraString);
 
                 Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        voltar = (Button)findViewById(R.id.buttonVoltar);
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Inserir.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

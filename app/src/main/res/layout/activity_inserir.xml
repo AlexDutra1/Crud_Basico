@@ -75,4 +75,14 @@
         android:layout_toRightOf="@+id/textViewEditora"
         android:layout_toEndOf="@+id/textViewEditora" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:id="@+id/buttonVoltar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

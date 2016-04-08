@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.galois.crud_basico.R;
@@ -49,6 +50,18 @@ public class Consulta extends Activity {
                 codigo = cursor.getString(cursor.getColumnIndexOrThrow(CriaBanco.ID));
                 Intent intent = new Intent(Consulta.this, Alterar.class);
                 intent.putExtra("codigo", codigo);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Button voltar;
+        voltar = (Button)findViewById(R.id.buttonVoltar);
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Consulta.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
