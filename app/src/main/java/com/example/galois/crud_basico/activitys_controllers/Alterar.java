@@ -57,6 +57,8 @@ public class Alterar extends Activity{
             }
         });
 
+        //testaoasasd
+
         deletar = (Button)findViewById(R.id.button3);
         deletar.setOnClickListener(new View.OnClickListener() {
             @Override

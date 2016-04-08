@@ -18,41 +18,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TESTE
 
-        Button botao = (Button) findViewById(R.id.button);
-
+        Button botao = (Button) findViewById(R.id.buttonCadastrar);
         botao.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View v) {
-                BancoController crud = new BancoController(getBaseContext());
-
-                EditText titulo = (EditText) findViewById(R.id.editText);
-                EditText autor = (EditText) findViewById((R.id.editText2));
-                EditText editora = (EditText) findViewById(R.id.editText3);
-
-                String tituloString = titulo.getText().toString();
-                String autorString = autor.getText().toString();
-                String editoraString = editora.getText().toString();
-                String resultado;
-
-                //TESTE
-
-                System.out.println("Titulo: " + tituloString);
-                System.out.println("Autor: " + autorString);
-                System.out.println("Editora: " + editoraString);
-
-                resultado = crud.insereDado(tituloString, autorString, editoraString);
-
-                Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+            public void onClick(View v2) {
+                Intent intent2 = new Intent(MainActivity.this, Inserir.class);
+                startActivity(intent2);
             }
         });
 
-        //trecho abaixo em teste
-
-        //Bloco de codigo que faz navegação de paginas por botões
         Button botao3 = (Button) findViewById(R.id.buttonConsultar);
         botao3.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick (View v){
 
@@ -60,11 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 //Finaliza a activity anterior
-                finish();
+                //finish();
 
             }
         });
-
 
 
     }//FIM DO ONCREATE
