@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //TESTE
+
         Button botao = (Button) findViewById(R.id.button);
 
         botao.setOnClickListener(new View.OnClickListener() {
